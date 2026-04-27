@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Souvenir Brasil cria lembrancas personalizadas com producao propria, lojas fisicas e atendimento nacional pelo WhatsApp.">
+  <title>Souvenir Brasil - Loja Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html" aria-label="Souvenir Brasil - Pagina inicial" title="Voltar para a pagina inicial">
+      <img src="logo.png" alt="Souvenir Brasil">
+    </a>
+    <nav aria-label="Navegacao principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="loja.html">Loja Virtual</a></li>
+        <li><a href="catalogos.html">Catalogos</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="contact.html">Contato</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">&#9776;</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-slideshow">
+      <div class="slideshow" id="slideshow" aria-hidden="true">
+        <div class="slide" style="background-image: url('carousel1.png');"></div>
+        <div class="slide" style="background-image: url('carousel2.png');"></div>
+        <div class="slide" style="background-image: url('carousel3.png');"></div>
+        <div class="slide" style="background-image: url('carousel4.png');"></div>
+        <div class="slide" style="background-image: url('carousel5.png');"></div>
+        <div class="slide" style="background-image: url('carousel6.png');"></div>
+      </div>
+      <div class="hero-content">
+        <span class="eyebrow" id="heroEyebrow">Memorias que viajam com voce</span>
+        <h1 id="heroTitle">Sempre boas lembrancas, feitas no Brasil</h1>
+        <p id="heroDescription">Producao propria em Natal, Florianopolis e Fortaleza, lojas fisicas em destinos turisticos e atendimento nacional para pedidos personalizados.</p>
+        <div class="hero-actions">
+          <a href="loja.html" class="btn">Visite nossa loja virtual</a>
+          <a href="contact.html" class="btn btn-secondary">Solicitar atendimento</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <div class="section-heading">
+        <span class="eyebrow">Por que escolher a Souvenir Brasil</span>
+        <h2>Uma marca pensada para transformar viagens em lembrancas especiais</h2>
+      </div>
+      <div class="highlight-grid">
+        <article class="highlight-card">
+          <strong>Producao propria</strong>
+          <p>Mais controle de qualidade, agilidade na reposicao e colecoes com identidade brasileira.</p>
+        </article>
+        <article class="highlight-card">
+          <strong>Personalizacao</strong>
+          <p>Produtos com nomes, letras e detalhes que tornam cada presente unico.</p>
+        </article>
+        <article class="highlight-card">
+          <strong>Atendimento rapido</strong>
+          <p>Voce escolhe o produto e ja inicia o pedido direto pelo WhatsApp.</p>
+        </article>
+      </div>
+      <div class="stats-grid" aria-label="Numeros da Souvenir Brasil">
+        <div class="stat-card">
+          <span class="stat-number">3</span>
+          <span class="stat-label">centros de producao</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">3</span>
+          <span class="stat-label">lojas em destinos turisticos</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">atendimento nacional</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-products-home">
+      <div class="section-heading section-heading-row">
+        <div>
+          <span class="eyebrow">Sugestoes</span>
+          <h2>Produtos da loja que fazem mais sucesso</h2>
+        </div>
+        <a href="loja.html" class="section-link">Ver mais</a>
+      </div>
+      <div class="featured-grid" id="featured-grid"></div>
+    </section>
+
+    <section class="cta-band">
+      <div>
+        <span class="eyebrow">Pedido rapido</span>
+        <h2 id="ctaTitle">Quer comprar ou personalizar um produto?</h2>
+        <p id="ctaDescription">Fale com a nossa equipe e receba atendimento direto pelo WhatsApp com muito mais agilidade.</p>
+      </div>
+      <a href="loja.html" class="btn">Explorar produtos</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>Souvenir Brasil</h4>
+        <p>Producao em Natal, Florianopolis e Fortaleza; lojas em Natal, Pipa (RN) e Fortaleza; distribuicao nacional por revendedores autorizados.</p>
+      </div>
+      <div>
+        <h4>Paginas</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="loja.html">Loja Virtual</a></li>
+          <li><a href="catalogos.html">Catalogos</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="products.html">Produtos</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>Email: contato@souvenirbrasil.com.br</li>
+          <li>Telefone: (11) 4000-0000</li>
+          <li>WhatsApp: (11) 90000-0000</li>
+          <li>Instagram: <a href="https://www.instagram.com/souvenirbrasil/" target="_blank" rel="noreferrer">@souvenirbrasil</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2026 Souvenir Brasil. Todos os direitos reservados.</p>
+  </footer>
+
+  <nav class="mobile-app-nav" aria-label="Navegacao rapida mobile">
+    <a href="index.html" class="mobile-app-link" aria-current="page">
+      <span class="mobile-app-icon">&#8962;</span>
+      <span>Inicio</span>
+    </a>
+    <a href="loja.html" class="mobile-app-link">
+      <span class="mobile-app-icon">&#9673;</span>
+      <span>Loja</span>
+    </a>
+    <button class="mobile-app-link mobile-app-cart" type="button" id="openCartMobile">
+      <span class="mobile-app-icon">&#9716;</span>
+      <span>Carrinho</span>
+    </button>
+    <a href="about.html" class="mobile-app-link">
+      <span class="mobile-app-icon">&#9678;</span>
+      <span>Sobre</span>
+    </a>
+    <a href="contact.html" class="mobile-app-link">
+      <span class="mobile-app-icon">&#10026;</span>
+      <span>Contato</span>
+    </a>
+  </nav>
+
+  <div class="badge-message" id="badgeMessage">
+    Atendimento rapido pelo WhatsApp
+  </div>
+  <div class="popup-overlay" id="popupOverlay" hidden></div>
+  <div class="popup" id="whatsappPopup" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <div class="popup-header">
+      <div class="popup-handle" aria-hidden="true"></div>
+      <div class="popup-header-row">
+        <div>
+          <span class="popup-kicker">Atendimento online</span>
+          <h3 id="popupTitle">Fale com a Souvenir Brasil</h3>
+        </div>
+        <button class="close-btn" id="closePopup" aria-label="Fechar atendimento">Fechar</button>
+      </div>
+      <p>Envie os detalhes do pedido e continue a conversa no WhatsApp.</p>
+    </div>
+    <div class="popup-body">
+      <form id="whatsappForm">
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+        <label for="produto">Escolha o produto</label>
+        <select id="produto" required>
+          <option value="">Selecione um produto</option>
+        </select>
+
+        <label for="tipo">O que voce deseja?</label>
+        <select id="tipo" required>
+          <option value="">Selecione</option>
+          <option value="quero comprar">Quero comprar</option>
+          <option value="quero mais informacoes">Quero mais informacoes</option>
+        </select>
+
+        <div id="quantityContainer" class="quantity-field" hidden>
+          <label for="quantidade">Quantidade</label>
+          <input type="number" id="quantidade" min="1" step="1" value="1" inputmode="numeric">
+        </div>
+
+        <label for="mensagemExtra">Mensagem extra</label>
+        <p class="field-hint">Tem alguma observacao, detalhe do produto ou frase especial? Escreva aqui. Se tiver uma foto de referencia, envie depois diretamente no WhatsApp.</p>
+        <textarea id="mensagemExtra" placeholder="Digite uma observacao (opcional)"></textarea>
+
+        <button type="submit" class="send-btn">Ir para o WhatsApp</button>
+      </form>
+    </div>
+  </div>
+  <button class="whatsapp-button" id="openPopup" aria-label="Abrir atendimento no WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </button>
+  <script src="site.config.js"></script>
+  <script src="product-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

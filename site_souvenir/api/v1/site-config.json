@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "updatedAt": "2026-04-24T00:00:00Z",
+  "brand": "Souvenir Brasil",
+  "whatsappNumber": "558487678591",
+  "currency": "BRL",
+  "catalogVersion": "v1",
+  "api": {
+    "baseUrl": "https://www.souvenirbrasil.com.br/api/v1",
+    "productsPath": "/products.php",
+    "catalogsPath": "/catalogs.php",
+    "configPath": "/site-config.php",
+    "indexPath": "/index.php"
+  }
+}

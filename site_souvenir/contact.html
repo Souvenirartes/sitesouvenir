@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Souvenir Brasil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html" aria-label="Souvenir Brasil - Pagina inicial" title="Voltar para a pagina inicial">
+      <img src="logo.png" alt="Souvenir Brasil">
+    </a>
+    <nav aria-label="Navegacao principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="loja.html">Loja Virtual</a></li>
+        <li><a href="catalogos.html">Catalogos</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="contact.html" aria-current="page">Contato</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+    </nav>
+  </header>
+
+  <main class="contact">
+    <h2>Fale Conosco</h2>
+    <p>Tem alguma duvida, sugestao ou precisa de suporte? Envie uma mensagem ou visite uma de nossas lojas em Natal, Pipa (RN) ou Fortaleza. Tambem atendemos em todo o Brasil por meio de revendedores autorizados.</p>
+    <form onsubmit="alert('Mensagem enviada!'); return false;">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar mensagem</button>
+    </form>
+    <div class="locations">
+      <h3>Nossas lojas</h3>
+      <p>Atendemos com lojas fisicas em Natal, Pipa (RN) e Fortaleza. Confira os enderecos:</p>
+      <ul>
+        <li>Natal - Praia de Ponta Negra, 789 - Ponta Negra</li>
+        <li>Pipa (RN) - Rua do Centro, 234 - Pipa</li>
+        <li>Fortaleza - Beira Mar, 321 - Meireles</li>
+      </ul>
+      <p>Nossos produtos tambem estao disponiveis em todo o Brasil por meio de revendedores autorizados.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>Souvenir Brasil</h4>
+        <p>Producao em Natal, Florianopolis e Fortaleza; lojas em Natal, Pipa (RN) e Fortaleza; distribuicao nacional por revendedores autorizados.</p>
+      </div>
+      <div>
+        <h4>Paginas</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="loja.html">Loja Virtual</a></li>
+          <li><a href="catalogos.html">Catalogos</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="products.html">Produtos</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>Email: contato@souvenirbrasil.com.br</li>
+          <li>Telefone: (11) 4000-0000</li>
+          <li>WhatsApp: (11) 90000-0000</li>
+          <li>Instagram: <a href="https://www.instagram.com/souvenirbrasil/" target="_blank" rel="noreferrer">@souvenirbrasil</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2026 Souvenir Brasil. Todos os direitos reservados.</p>
+  </footer>
+
+  <nav class="mobile-app-nav" aria-label="Navegacao rapida mobile">
+    <a href="index.html" class="mobile-app-link">
+      <span class="mobile-app-icon">&#8962;</span>
+      <span>Inicio</span>
+    </a>
+    <a href="loja.html" class="mobile-app-link">
+      <span class="mobile-app-icon">&#9673;</span>
+      <span>Loja</span>
+    </a>
+    <button class="mobile-app-link mobile-app-cart" type="button" id="openCartMobile">
+      <span class="mobile-app-icon">&#9716;</span>
+      <span>Carrinho</span>
+    </button>
+    <a href="about.html" class="mobile-app-link">
+      <span class="mobile-app-icon">&#9678;</span>
+      <span>Sobre</span>
+    </a>
+    <a href="contact.html" class="mobile-app-link" aria-current="page">
+      <span class="mobile-app-icon">&#10026;</span>
+      <span>Contato</span>
+    </a>
+  </nav>
+
+  <script src="site.config.js"></script>
+  <script src="product-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Busque catalogos da Souvenir Brasil por nome e abra o arquivo online.">
+  <title>Catalogos - Souvenir Brasil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html" aria-label="Souvenir Brasil - Pagina inicial">
+      <img src="logo.png" alt="Souvenir Brasil">
+    </a>
+    <nav aria-label="Navegacao principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="loja.html">Loja Virtual</a></li>
+        <li><a href="catalogos.html" aria-current="page">Catalogos</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="contact.html">Contato</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+    </nav>
+  </header>
+
+  <main class="products">
+    <div class="section-heading">
+      <span class="eyebrow">Busca inteligente</span>
+      <h2>Encontre catalogos por nome</h2>
+      <p>Digite o nome do catalogo para localizar e abrir rapidamente.</p>
+    </div>
+
+    <section class="card" style="padding: 16px; border-radius: 18px; background: #fff; box-shadow: var(--shadow-soft); border: 1px solid rgba(24,36,47,0.08);">
+      <label for="catalogSearch" style="display:block; font-weight:700; margin-bottom:8px;">Buscar catalogo</label>
+      <input id="catalogSearch" type="search" placeholder="Ex.: Verao, Personalizados..." style="width:100%; min-height:46px; padding: 10px 12px; border-radius: 12px; border: 1px solid rgba(24,36,47,0.16);">
+      <p id="catalogResultCount" style="margin-top:10px; color:var(--text-700);">Carregando catalogos...</p>
+    </section>
+
+    <div id="catalogGrid" class="featured-grid" style="margin-top: 18px;"></div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>Souvenir Brasil</h4>
+        <p>Producao em Natal, Florianopolis e Fortaleza; lojas em Natal, Pipa (RN) e Fortaleza; distribuicao nacional por revendedores autorizados.</p>
+      </div>
+      <div>
+        <h4>Paginas</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="loja.html">Loja Virtual</a></li>
+          <li><a href="catalogos.html">Catalogos</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>Email: contato@souvenirbrasil.com.br</li>
+          <li>Telefone: (11) 4000-0000</li>
+          <li>WhatsApp: (11) 90000-0000</li>
+          <li>Instagram: <a href="https://www.instagram.com/souvenirbrasil/" target="_blank" rel="noreferrer">@souvenirbrasil</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2026 Souvenir Brasil. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="site.config.js"></script>
+  <script src="catalogs.js"></script>
+</body>
+</html>

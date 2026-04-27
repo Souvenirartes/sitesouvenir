@@ -1,0 +1,25 @@
+{
+  "version": "v1",
+  "updatedAt": "2026-04-24T00:00:00Z",
+  "currency": "BRL",
+  "items": [
+    { "id": "souvenir-001", "slug": "chaveiro-placa-mercosul", "name": "Chaveiro placa Mercosul", "category": "Chaveiros", "priceLabel": "R$ 29,90", "priceValue": 29.9, "accent": "#1d4f9c", "hasVariants": true, "active": true },
+    { "id": "souvenir-002", "slug": "chaveiro-coracao", "name": "Chaveiro Coracao", "category": "Chaveiros", "priceLabel": "R$ 25,90", "priceValue": 25.9, "accent": "#e57373", "hasVariants": true, "active": true },
+    { "id": "souvenir-003", "slug": "chaveiro-redondo", "name": "Chaveiro redondo", "category": "Chaveiros", "priceLabel": "R$ 23,90", "priceValue": 23.9, "accent": "#34a853", "hasVariants": false, "active": true },
+    { "id": "souvenir-004", "slug": "chaveiro-quadrado", "name": "Chaveiro quadrado", "category": "Chaveiros", "priceLabel": "R$ 23,90", "priceValue": 23.9, "accent": "#ff8a65", "hasVariants": false, "active": true },
+    { "id": "souvenir-005", "slug": "chaveiro-link-quadrado", "name": "Chaveiro link quadrado", "category": "Chaveiros", "priceLabel": "R$ 27,90", "priceValue": 27.9, "accent": "#9575cd", "hasVariants": true, "active": true },
+    { "id": "souvenir-006", "slug": "chaveiro-link-redondo", "name": "Chaveiro link redondo", "category": "Chaveiros", "priceLabel": "R$ 27,90", "priceValue": 27.9, "accent": "#4db6ac", "hasVariants": true, "active": true },
+    { "id": "souvenir-007", "slug": "chaveiro-link-coracao", "name": "Chaveiro link coracao", "category": "Chaveiros", "priceLabel": "R$ 27,90", "priceValue": 27.9, "accent": "#f06292", "hasVariants": true, "active": true },
+    { "id": "souvenir-008", "slug": "necessaire", "name": "Necessaire", "category": "Acessorios", "priceLabel": "R$ 49,90", "priceValue": 49.9, "accent": "#8d6e63", "hasVariants": false, "active": true },
+    { "id": "souvenir-009", "slug": "porta-moedas", "name": "Porta-moedas", "category": "Acessorios", "priceLabel": "R$ 19,90", "priceValue": 19.9, "accent": "#198754", "hasVariants": false, "active": true },
+    { "id": "souvenir-010", "slug": "necessaire-bau", "name": "Necessaire bau", "category": "Acessorios", "priceLabel": "R$ 59,90", "priceValue": 59.9, "accent": "#0f2f6e", "hasVariants": true, "active": true },
+    { "id": "souvenir-011", "slug": "necessaire-pet", "name": "Necessaire pet", "category": "Acessorios", "priceLabel": "R$ 39,90", "priceValue": 39.9, "accent": "#4fc3f7", "hasVariants": true, "active": true },
+    { "id": "souvenir-012", "slug": "estojo", "name": "Estojo", "category": "Acessorios", "priceLabel": "R$ 34,90", "priceValue": 34.9, "accent": "#ffb74d", "hasVariants": false, "active": true },
+    { "id": "souvenir-013", "slug": "necessaire-link", "name": "Necessaire link", "category": "Acessorios", "priceLabel": "R$ 44,90", "priceValue": 44.9, "accent": "#81c784", "hasVariants": true, "active": true },
+    { "id": "souvenir-014", "slug": "caneca", "name": "Caneca", "category": "Canecas", "priceLabel": "R$ 39,90", "priceValue": 39.9, "accent": "#ff7043", "hasVariants": false, "active": true },
+    { "id": "souvenir-015", "slug": "caneca-personalizada", "name": "Caneca personalizada", "category": "Canecas", "priceLabel": "R$ 59,90", "priceValue": 59.9, "accent": "#1d4f9c", "hasVariants": true, "active": true },
+    { "id": "souvenir-016", "slug": "ima-placa", "name": "Ima placa", "category": "Imas", "priceLabel": "R$ 14,90", "priceValue": 14.9, "accent": "#26a69a", "hasVariants": false, "active": true },
+    { "id": "souvenir-017", "slug": "ima-abridor-retangular", "name": "Ima abridor retangular", "category": "Imas", "priceLabel": "R$ 16,90", "priceValue": 16.9, "accent": "#66bb6a", "hasVariants": false, "active": true },
+    { "id": "souvenir-018", "slug": "chaveiro-letra", "name": "Chaveiro letra", "category": "Personalizados", "priceLabel": "R$ 24,90", "priceValue": 24.9, "accent": "#7e57c2", "hasVariants": true, "active": true }
+  ]
+}

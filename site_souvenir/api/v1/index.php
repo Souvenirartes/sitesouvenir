@@ -1,0 +1,17 @@
+<?php
+
+declare(strict_types=1);
+
+require __DIR__ . '/bootstrap.php';
+
+jsonResponse([
+    'version' => 'v1',
+    'resources' => [
+        'siteConfig' => '/api/v1/site-config.php',
+        'products' => '/api/v1/products.php',
+        'catalogs' => '/api/v1/catalogs.php',
+        'authLogin' => '/api/v1/auth/login.php',
+        'authRegister' => '/api/v1/auth/register.php',
+        'authMe' => '/api/v1/auth/me.php',
+    ],
+]);

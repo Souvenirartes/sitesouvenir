@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.souvenirbrasil.com.br/sitemap.xml

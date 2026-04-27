@@ -1,0 +1,82 @@
+/*
+ * login.css
+ *
+ * Styles specific to the login page. Uses the same colour palette
+ * defined in navbar.css via CSS custom properties to ensure the
+ * login page feels consistent with the rest of the site. The form
+ * is centered on the page with generous spacing and subtle card
+ * styling. Buttons and inputs use the accent colours for focus
+ * states and actions.
+ */
+
+/* Container for the login page content */
+.login-page {
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-page h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* Form fields styling */
+#login-form .field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#login-form label {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+#login-form input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#login-form input:focus {
+  border-color: var(--accent-color);
+}
+
+/* Submit button styling */
+#login-form .btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#login-form .btn:hover {
+  background-color: var(--accent-dark);
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .login-page {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+  .login-page h1 {
+    font-size: 1.5rem;
+  }
+}

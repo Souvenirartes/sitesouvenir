@@ -1,0 +1,195 @@
+/*
+ * navbar.css
+ *
+ * Applies a modern look and feel to the site's main navigation bar.
+ * Features:
+ *   - Flexbox layout with space between logo/cart and menu items
+ *   - Sticky positioning with subtle shadow
+ *   - Animated underline on hover
+ *   - Smooth color transitions
+ *
+ * Usage: Add the class `navbar` to your navigation container and wrap
+ * the links in an element with class `nav-items`. The cart badge should
+ * have id `cart-count` so that cart.js can update it automatically.
+ *
+ * Example HTML structure:
+ * <header>
+ *   <nav class="navbar">
+ *     <div class="logo">
+ *       <a href="/">Souvenir</a>
+ *       <span class="cart">Carrinho <span id="cart-count">0</span></span>
+ *     </div>
+ *     <div class="nav-items">
+ *       <a href="#inicio">Início</a>
+ *       <a href="#loja">Loja Virtual</a>
+ *       <!-- more links -->
+ *     </div>
+ *   </nav>
+ * </header>
+ */
+
+/*
+ * Colour palette
+ *
+ * Use CSS custom properties to define the brand colours once and reuse
+ * them throughout the stylesheet. This makes it easy to maintain a
+ * consistent look across all pages. The primary colour is a deep navy
+ * used for text and headings, the accent colour is a rich green used
+ * for highlights and call‑to‑actions, and a darker accent is used
+ * for hover states. A muted text colour is available for longer
+ * passages of copy.
+ */
+:root {
+  --primary-color: #02203A;
+  --accent-color: #008060;
+  --accent-dark: #006e4e;
+  --text-muted: #555;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* Use a modern, premium typeface */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Logo text inherits the primary brand colour */
+.navbar .logo a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Cart indicator uses the primary colour as well */
+.navbar .cart {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+/* Navigation links start with the primary colour and transition to the accent
+ * colour on hover. */
+.navbar .nav-items a {
+  margin: 0 0.75rem;
+  position: relative;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+/* Underline for navigation links uses the accent colour */
+.navbar .nav-items a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  /* Use the site accent color for the underline */
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+/* Highlight the link in accent colour on hover */
+.navbar .nav-items a:hover {
+  color: var(--accent-color);
+}
+
+/* Animate the underline on hover */
+.navbar .nav-items a:hover::after {
+  width: 100%;
+}
+
+/* Highlight the current page link */
+/* Active link always appears highlighted with full underline */
+.navbar .nav-items a.active {
+  color: var(--accent-color);
+}
+.navbar .nav-items a.active::after {
+  width: 100%;
+}
+
+/* Optional: animate nav items on load */
+.navbar .nav-items a {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: navFadeIn 0.5s forwards;
+}
+.navbar .nav-items a:nth-child(1) { animation-delay: 0.1s; }
+.navbar .nav-items a:nth-child(2) { animation-delay: 0.2s; }
+.navbar .nav-items a:nth-child(3) { animation-delay: 0.3s; }
+.navbar .nav-items a:nth-child(4) { animation-delay: 0.4s; }
+.navbar .nav-items a:nth-child(5) { animation-delay: 0.5s; }
+.navbar .nav-items a:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes navFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Language selector styles */
+.lang-select {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.lang-icon {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.lang-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+  }
+  .navbar .logo,
+  .navbar .nav-items {
+    width: 100%;
+    text-align: center;
+    margin: 0.25rem 0;
+  }
+  .navbar .nav-items a {
+    display: inline-block;
+    margin: 0.5rem;
+    font-size: 0.95rem;
+  }
+  /* Remove staggered animation on small screens for performance */
+  .navbar .nav-items a {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  /* On small screens, center the language selector and increase icon size */
+  .lang-select {
+    width: 100%;
+    justify-content: center;
+    margin: 0.25rem 0;
+  }
+  .lang-icon {
+    font-size: 1.4rem;
+    margin: 0 0.5rem;
+  }
+}

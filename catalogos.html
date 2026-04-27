@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogos por Cidade</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="catalogos.css">
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script>
+    // TODO: Insira suas credenciais do Firebase aqui
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_AUTH_DOMAIN",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_STORAGE_BUCKET",
+      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // Restrict access: redirect to login page if the user is not authenticated.
+    firebase.auth().onAuthStateChanged((user) => {
+      if (!user) {
+        // Replace 'login.html' with the actual path to your login page.
+        window.location.href = 'login.html';
+      }
+    });
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/">Souvenir</a>
+    </div>
+    <div class="nav-items">
+      <a href="index.html" data-i18n="nav_home">Início</a>
+      <a href="loja.html" data-i18n="nav_store">Loja Virtual</a>
+      <a href="catalogos.html" class="active" data-i18n="nav_catalogs">Catálogos</a>
+      <a href="stores.html" data-i18n="nav_stores">Lojas</a>
+      <a href="sobre.html" data-i18n="nav_about">Sobre</a>
+      <a href="login.html" data-i18n="nav_login">Entrar</a>
+    </div>
+    <div class="lang-select">
+      <span class="lang-icon" data-lang="pt" role="button" aria-label="Português">🇧🇷</span>
+      <span class="lang-icon" data-lang="pt" role="button" aria-label="Português (Portugal)">🇵🇹</span>
+      <span class="lang-icon" data-lang="es" role="button" aria-label="Español">🇪🇸</span>
+    </div>
+  </nav>
+  <main class="catalog-page">
+    <h1>Catálogos por Cidade</h1>
+    <input type="text" id="catalog-search" placeholder="Buscar cidade...">
+    <div id="catalog-container"></div>
+  </main>
+  <script src="catalogs.js"></script>
+  <script src="lang.js"></script>
+</body>
+</html>

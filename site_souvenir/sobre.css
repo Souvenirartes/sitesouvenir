@@ -1,0 +1,31 @@
+/*
+ * sobre.css
+ *
+ * Styles for the "Sobre nós" page. This file provides a clean and
+ * professional layout consistent with the rest of the site. Colours are
+ * drawn from the CSS custom properties defined in navbar.css so that
+ * headings and copy align with the overall brand palette.
+ */
+
+.about-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  /* Use the site‑wide font family */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  /* Use primary colour for the main heading */
+  color: var(--primary-color);
+}
+
+.about-page p {
+  font-size: 1rem;
+  /* Muted text colour for body copy */
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogos por Cidade</title>
+  <title>Produtos por Cidade</title>
   <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="catalogos.css">
+  <link rel="stylesheet" href="city_products.css">
   <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
@@ -22,10 +22,9 @@
     };
     firebase.initializeApp(firebaseConfig);
 
-    // Restrict access: redirect to login page if the user is not authenticated.
+    // Restrict access: redirect to login page if user is not authenticated.
     firebase.auth().onAuthStateChanged((user) => {
       if (!user) {
-        // Replace 'login.html' with the actual path to your login page.
         window.location.href = 'login.html';
       }
     });
@@ -50,12 +49,23 @@
       <span class="lang-icon" data-lang="es" role="button" aria-label="Español">🇪🇸</span>
     </div>
   </nav>
-  <main class="catalog-page">
-    <h1>Catálogos por Cidade</h1>
-    <input type="text" id="catalog-search" placeholder="Buscar cidade...">
-    <div id="catalog-container"></div>
+  <main class="city-products-page">
+    <h1 id="city-title">Produtos</h1>
+    <div class="product-filters">
+      <!-- Search by product name -->
+      <input type="text" id="product-search" placeholder="Buscar produto..." aria-label="Buscar produto">
+      <!-- Select category (populated dynamically) -->
+      <select id="category-filter" aria-label="Filtrar por categoria">
+        <option value="">Todas as categorias</option>
+      </select>
+      <!-- Price range inputs -->
+      <input type="number" id="min-price" placeholder="Preço mínimo" min="0" step="0.01" aria-label="Preço mínimo">
+      <input type="number" id="max-price" placeholder="Preço máximo" min="0" step="0.01" aria-label="Preço máximo">
+    </div>
+    <div id="city-product-list" class="product-grid"></div>
   </main>
-  <script src="catalogs.js"></script>
+  <script src="cart.js"></script>
+  <script src="city_products.js"></script>
   <script src="lang.js"></script>
 </body>
 </html>

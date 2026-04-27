@@ -1,0 +1,117 @@
+/*
+ * admin.css
+ *
+ * Basic styling for admin pages, including forms and lists. Builds on
+ * the navbar styles for consistency. Colours are derived from the
+ * CSS custom properties defined in navbar.css (see that file for
+ * definitions). This ensures that the admin interface matches the
+ * premium look and feel of the rest of the site.
+ */
+
+.admin-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  /* Use the site-wide font family */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.admin-page h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+}
+
+.form-section, .list-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  color: #02203A;
+}
+
+.field input,
+.field textarea {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.field input:focus,
+.field textarea:focus {
+  /* Use the global accent colour for form field focus */
+  border-color: var(--accent-color);
+}
+
+.btn {
+  display: inline-block;
+  /* Use the global accent colour for primary admin actions */
+  background: var(--accent-color);
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  /* Darken the accent colour on hover */
+  background: var(--accent-dark);
+}
+
+#catalog-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#catalog-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+#catalog-list li:last-child {
+  border-bottom: none;
+}
+
+#catalog-list button {
+  background: #cc0000;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.2s;
+}
+
+#catalog-list button:hover {
+  background: #990000;
+}

@@ -1,0 +1,118 @@
+/*
+ * chat.css
+ *
+ * Premium styling for the floating customer service chat widget. Includes
+ * a circular chat button and a sliding panel with a header and form.
+ */
+
+.chat-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s;
+  z-index: 1000;
+}
+
+.chat-button:hover {
+  transform: scale(1.1);
+}
+
+.chat-button svg {
+  fill: #fff;
+  width: 28px;
+  height: 28px;
+}
+
+.chat-panel {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 320px;
+  max-height: 90vh;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999;
+  /* Use the site-wide font family */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chat-panel.open {
+  display: flex;
+}
+
+.chat-panel header {
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.chat-panel header .close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.chat-panel form {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.chat-panel form input,
+.chat-panel form select,
+.chat-panel form textarea {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.chat-panel form input:focus,
+.chat-panel form select:focus,
+.chat-panel form textarea:focus {
+  /* Use the global accent colour for form field focus */
+  border-color: var(--accent-color);
+}
+
+.chat-panel form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.chat-panel form .submit-btn {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.chat-panel form .submit-btn:hover {
+  background: var(--accent-dark);
+}

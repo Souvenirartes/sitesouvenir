@@ -1,0 +1,60 @@
+/*
+ * stores.css
+ *
+ * Styles for the page that displays store locations as cards/posters. Colours
+ * reference the CSS custom properties defined in navbar.css to maintain
+ * consistency across the site.
+ */
+
+.stores-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  /* Use the site-wide font family */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stores-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.stores-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.store-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.store-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.store-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.store-card h3 {
+  margin: 0.75rem 1rem 0.25rem;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+
+.store-card p {
+  margin: 0 1rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
